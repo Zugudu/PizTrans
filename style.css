@@ -1,0 +1,67 @@
+@font-face
+{
+	font-family: Anime;
+	src: url(a.ttf);
+}
+div
+{
+	font: 100% Anime;
+}
+.wrap
+{
+	width: 860px;
+	margin: 0 auto;
+	display: block;
+}
+.wrap :last-child
+{
+	margin-right: 0px;
+}
+.block
+{
+	display: inline-block;
+	margin: 0 20px 10px 0;
+	vertical-align: top;
+}
+.image
+{
+	display: block;
+	width: 200px;
+	height: 300px;
+	outline: #515151 solid 3px;
+}
+.image:hover
+{
+	outline: #000000 inset 5px;
+}
+.caption
+{
+	display: block;
+	text-align: center;
+	width: 200px;
+	margin-top: 6px;
+}
+#imgs
+{
+	width: 60%;
+	margin: 0 auto;
+}
+#cp
+{
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	height: 40px;
+	width: 90px;
+}
+#cp :last-child
+{
+	margin-right: 0px;
+}
+#cpelem
+{
+	float: left;
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+}
