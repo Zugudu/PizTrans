@@ -5,7 +5,11 @@
 }
 div
 {
-	font: 100% Anime;
+	font: 110% Anime;
+}
+a
+{
+	font: 250% Anime;
 }
 .wrap
 {
@@ -33,6 +37,17 @@ div
 	width: 40%;
 	margin: 5% 0;
 }
+.name
+{
+	font: bold 300% Anime;
+}
+.disc
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	margin-left:10px;
+}
 #imgs
 {
 	width: 80%;
@@ -48,5 +63,10 @@ div
 {
 	float: left;
 	width: 100%;
+	height: auto;
+}
+#control
+{
+	width:20%;
 	height: auto;
 }

@@ -1,6 +1,8 @@
 <html>
 <head>
 <meta charset=utf8>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" media="(max-device-width:480px)" href="mob.css"/>
 <style>
 @font-face
 {
@@ -15,24 +17,6 @@ div
 .block
 {
 	display: inline-block;
-}
-.disc
-{
-	display: inline-block;
-	vertical-align: top;
-	width: 200px;
-	margin-left:10px;
-}
-.name
-{
-	font: bold 120% Anime;
-}
-.image
-{
-	display: block;
-	width: 200px;
-	height: 300px;
-	outline: #515151 solid 3px;
 }
 </style>
 </head>
@@ -57,8 +41,8 @@ while($genre=$genres->fetchArray())
 	echo("<a href=genres.php?id=\"".$r2['id']."\">".$r2['name']."</a> ");
 }
 echo("</div></div><div>
-	<a href=/><img width=40 src=ico/la.png></a>
-	<a href=show.php?id=".urlencode($res['dir'])."><img width=40 src=ico/ra.png></a></div>");
+	<a href=/><img id=control src=ico/la.png></a>
+	<a href=show.php?id=".urlencode($res['dir'])."><img id=control src=ico/ra.png></a></div>");
 $db->close();
 ?>
 </center>
