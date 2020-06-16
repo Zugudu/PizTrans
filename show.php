@@ -6,9 +6,7 @@
 </head>
 <body>
 <center>
-<div id=cp>
-<a href=/><img id=cpelem src=ico/home.png></a>
-</div>
+<a href=/><img class="control home" src=ico/home.png></a>
 <?php
 if(strpos($_GET['id'],'..')===false)
 {

@@ -53,19 +53,14 @@ a
 	width: 80%;
 	margin: 0 auto;
 }
-#cp
+.home
 {
 	position: fixed;
-	height: auto;
-	width: 10%;
-}
-#cpelem
-{
+	top: 10px;
+	left: 10px;
 	float: left;
-	width: 100%;
-	height: auto;
 }
-#control
+.control
 {
 	width:20%;
 	height: auto;

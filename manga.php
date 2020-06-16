@@ -28,9 +28,11 @@ $res=$db->querySingle("select name,dir from hentai where id=".
 	$_GET['id'],true);
 
 echo("<div class=name>".$res['name']."</div>");
-echo("<div><div class=block><img class=image src=\"hentai/".
+echo("<div><div class=block>
+	<a href=show.php?id=".urlencode($res['dir']).">
+	<img class=image src=\"hentai/".
 	$res['dir'].'/'
-	.array_diff(scandir("hentai/".$res['dir']),array('.','..'))[2].'"></div>'.
+	.array_diff(scandir("hentai/".$res['dir']),array('.','..'))[2].'"></a></div>'.
 	"<div class=disc>");
 $genres=$db->query("select id_genres from hentai_genres 
 	where id_hentai=".$_GET['id'].";");
@@ -41,8 +43,8 @@ while($genre=$genres->fetchArray())
 	echo("<a href=genres.php?id=\"".$r2['id']."\">".$r2['name']."</a> ");
 }
 echo("</div></div><div>
-	<a href=/><img id=control src=ico/la.png></a>
-	<a href=show.php?id=".urlencode($res['dir'])."><img id=control src=ico/ra.png></a></div>");
+	<a href=/><img class=control src=ico/la.png></a>
+	<a href=show.php?id=".urlencode($res['dir'])."><img class=control src=ico/ra.png></a></div>");
 $db->close();
 ?>
 </center>
