@@ -2,6 +2,7 @@
 <head>
 <meta charset=utf8>
 <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" media="(max-device-width:480px)" href="mob.css"/>
 </head>
 <body>
 <center>

@@ -9,50 +9,44 @@ div
 }
 .wrap
 {
-	width: 880px;
+	width: 95%;
 	margin: 0 auto;
 	display: block;
 }
 .block
 {
 	display: inline-block;
-	margin: 0 10px 10px 10px;
+	margin: 0 5%;
 	vertical-align: top;
+	width: 40%;
 }
 .image
 {
 	display: block;
-	outline: #515151 solid 3px;
-	width:200px;
-	height:300px;
-}
-.image:hover
-{
-	outline: #000000 inset 5px;
+	width: 100%;
+	height: auto;
 }
 .caption
 {
 	display: block;
 	text-align: center;
-	width: 200px;
-	margin-top: 6px;
+	width: 40%;
+	margin: 5% 0;
 }
 #imgs
 {
-	width: 60%;
+	width: 80%;
 	margin: 0 auto;
 }
 #cp
 {
 	position: fixed;
-	top: 10px;
-	left: 10px;
-	height: 40px;
-	width: 40px;
+	height: auto;
+	width: 10%;
 }
 #cpelem
 {
 	float: left;
-	width: 40px;
-	height: 40px;
+	width: 100%;
+	height: auto;
 }

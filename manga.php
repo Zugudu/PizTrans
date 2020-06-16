@@ -44,7 +44,7 @@ $res=$db->querySingle("select name,dir from hentai where id=".
 	$_GET['id'],true);
 
 echo("<div class=name>".$res['name']."</div>");
-echo("<div><div class=block><img class=image width=200 height=300 src=\"hentai/".
+echo("<div><div class=block><img class=image src=\"hentai/".
 	$res['dir'].'/'
 	.array_diff(scandir("hentai/".$res['dir']),array('.','..'))[2].'"></div>'.
 	"<div class=disc>");
