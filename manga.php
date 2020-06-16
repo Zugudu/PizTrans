@@ -27,6 +27,13 @@ div
 {
 	font: bold 120% Anime;
 }
+.image
+{
+	display: block;
+	width: 200px;
+	height: 300px;
+	outline: #515151 solid 3px;
+}
 </style>
 </head>
 <body>
@@ -37,9 +44,9 @@ $res=$db->querySingle("select name,dir from hentai where id=".
 	$_GET['id'],true);
 
 echo("<div class=name>".$res['name']."</div>");
-echo("<div><div class=block><img width=200 height=300 src=\"hentai/".
+echo("<div><div class=block><img class=image width=200 height=300 src=\"hentai/".
 	$res['dir'].'/'
-	.array_diff(scandir("hentai/".$res['dir']),array('.','..'))[2].'\"></div>'.
+	.array_diff(scandir("hentai/".$res['dir']),array('.','..'))[2].'"></div>'.
 	"<div class=disc>");
 $genres=$db->query("select id_genres from hentai_genres 
 	where id_hentai=".$_GET['id'].";");
