@@ -10,15 +10,9 @@
 $db=new SQLite3("db");
 $res=$db->query("select id,name,dir from hentai;");
 
-$cx=0;
 echo("<div class=wrap>");
 while($arr=$res->fetchArray())
 {
-	if($cx++==4)
-	{
-		echo("</div><div class=wrap>");
-		$cx=1;
-	}
 	echo ("<div class=block><div class=image><a href=manga.php?id=".
 		$arr['id']."><img src=\"hentai/".
 		$arr['dir']."/".

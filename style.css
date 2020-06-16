@@ -9,7 +9,7 @@ div
 }
 .wrap
 {
-	width: 860px;
+	width: 880px;
 	margin: 0 auto;
 	display: block;
 }
@@ -20,7 +20,7 @@ div
 .block
 {
 	display: inline-block;
-	margin: 0 20px 10px 0;
+	margin: 0 10px 10px 10px;
 	vertical-align: top;
 }
 .image
