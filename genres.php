@@ -3,6 +3,7 @@
 <meta charset=utf8>
 <meta name=viewport width=device-width>
 <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" media="(max-device-width:480px)" href="mob.css"/>
 </head>
 <body>
 <center>
