@@ -45,7 +45,7 @@ div
 {
 	display: inline-block;
 	vertical-align: top;
-	width: 200px;
+	width: 400px;
 	margin-left:10px;
 }
 #imgs
@@ -70,7 +70,7 @@ div
 	display: inline-block;
 	text-decoration: none;
 	background-color: #a1a1a1;
-	color: white;
+	color: black;
 	padding: 5px;
 	margin: 5px;
 	outline: #525252 solid 3px;
