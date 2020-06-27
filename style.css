@@ -65,3 +65,20 @@ div
 	width:	40px;
 	height: auto;
 }
+#genre
+{
+	display: inline-block;
+	text-decoration: none;
+	background-color: #a1a1a1;
+	color: white;
+	padding: 5px;
+	margin: 5px;
+	outline: #525252 solid 3px;
+}
+#genre:hover
+{
+	display: inline-block;
+	text-decoration: none;
+	background-color: #a1a1a1;
+	outline: #000000 inset 5px;
+}

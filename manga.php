@@ -34,13 +34,12 @@ echo("<div><div class=block>
 	$res['dir'].'/'
 	.array_diff(scandir("hentai/".$res['dir']),array('.','..'))[2].'"></a></div>'.
 	"<div class=disc>");
-$genres=$db->query("select id_genres from hentai_genres 
-	where id_hentai=".$_GET['id'].";");
+$genres=$db->query("select id_genres from hentai_genres where id_hentai=".$_GET['id'].";");
 while($genre=$genres->fetchArray())
 {
 	$r2=$db->querySingle("select id,name from genres where id=".
 		$genre['id_genres'].';',true);
-	echo("<a href=genres.php?id=\"".$r2['id']."\">".$r2['name']."</a> ");
+	echo("<a id=genre href=genres.php?id=\"".$r2['id']."\">".$r2['name']."</a> ");
 }
 echo("</div></div><div>
 	<a href=/><img class=control src=ico/la.png></a>

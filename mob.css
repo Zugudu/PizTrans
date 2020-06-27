@@ -65,3 +65,12 @@ a
 	width:15%;
 	height: auto;
 }
+#genre
+{
+	display: inline-block;
+	text-decoration: none;
+	background-color: #a1a1a1;
+	color: white;
+	padding: 5px;
+	margin: 5px;
+}
