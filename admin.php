@@ -34,21 +34,37 @@ if(isset($_POST['genre']))
 }
 
 $res=$db->query("select id,name from hentai;");
-echo "<form method=post><select name=id_m>";
+echo "<form method=post><select name=id_m size=20>";
 while($arr=$res->fetchArray())
 {
 	echo("<option value=".$arr['id'].">".$arr['name']."</option>");
 }
-echo("</select> <select name=id_g[] multiple>");
+echo("</select> <select name=id_g[] multiple size=20>");
 $res=$db->query("select id,name from genres;");
 while($arr=$res->fetchArray())
 {
 	echo("<option value=".$arr['id'].">".$arr['name']."</option>");
 }
+echo("</select> <input type='submit' value=Submit></form>");
+echo '<hr>';
+
+$res=$db->query("select id,name from hentai;");
+echo "<form method=post><select name=rid_m size=20>";
+while($arr=$res->fetchArray())
+{
+	echo("<option value=".$arr['id'].">".$arr['name']."</option>");
+}
+echo("</select> <select name=rid_g[] multiple size=20>");
+$res=$db->query("select id,name from genres;");
+while($arr=$res->fetchArray())
+{
+	echo("<option value=".$arr['id'].">".$arr['name']."</option>");
+}
+echo("</select> <input type='submit' value=Submit></form>");
+
 $db->close();
 ?>
-</select> <input type='submit' value=Submit></form>
-<br><hr>
+<hr>
 <form method=post>
 Назва теґу <input type=text name=genre>
 <input type='submit' value='Add'>
