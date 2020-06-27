@@ -17,6 +17,16 @@ if(isset($_POST['id_m']) && isset($_POST['id_g']))
 		$stmt->execute();
 	}
 }
+if(isset($_POST['rid_m']) && isset($_POST['rid_g']))
+{
+	$stmt=$db->prepare("delete from hentai_genres where id_hentai=:idm and id_genres=:idg;");
+			$stmt->bindValue(':idm',$_POST['rid_m'],SQLITE3_INTEGER);
+			$stmt->bindParam(':idg',$idg,SQLITE3_INTEGER);
+	foreach ($_POST['rid_g'] as $idg)
+	{
+		$stmt->execute();
+	}
+}
 if(isset($_POST['genre']))
 {
 	$s_check=$db->prepare('select id from genres where name like :g_name');
@@ -45,7 +55,7 @@ while($arr=$res->fetchArray())
 {
 	echo("<option value=".$arr['id'].">".$arr['name']."</option>");
 }
-echo("</select> <input type='submit' value=Submit></form>");
+echo("</select> <input type='submit' value=Add></form>");
 echo '<hr>';
 
 $res=$db->query("select id,name from hentai;");
@@ -60,7 +70,7 @@ while($arr=$res->fetchArray())
 {
 	echo("<option value=".$arr['id'].">".$arr['name']."</option>");
 }
-echo("</select> <input type='submit' value=Submit></form>");
+echo("</select> <input type='submit' value=Remove></form>");
 
 $db->close();
 ?>

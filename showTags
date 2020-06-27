@@ -1,0 +1,1 @@
+select id_hentai, hentai.name, id_genres, genres.name from hentai,genres,hentai_genres where id_hentai=hentai.id and id_genres=genres.id order by id_hentai asc;
