@@ -35,7 +35,7 @@ if(isset($_POST['genre']))
 
 	if(!$r_check->fetchArray())
 	{
-		$s_add=$db->prepare('insert into genres values(null,:g_name,null);');
+		$s_add=$db->prepare('insert into genres values(null,:g_name);');
 			$s_add->bindValue(':g_name',$_POST['genre'],SQLITE3_TEXT);
 			$s_add->execute();
 	}else{
